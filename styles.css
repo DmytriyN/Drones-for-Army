@@ -127,7 +127,7 @@
     margin-bottom: 52px;
 }
 
-.main__images{
+.main__images {
     display: flex;
     justify-content: center;
 }
@@ -210,7 +210,7 @@ input[type=radio] {
     opacity: 0;
 }
 
-input[type=radio] ~ span {
+input[type=radio]~span {
     position: relative;
     display: inline-block;
     width: 100%;
@@ -222,15 +222,15 @@ input[type=radio] ~ span {
     cursor: pointer;
 }
 
-input[type=radio]:checked ~ span {
+input[type=radio]:checked~span {
     background-color: rgba(18, 86, 155, 0.20);
 }
 
-input[type=radio] ~ span::after  {
+input[type=radio]~span::after {
     content: "";
 }
 
-input[type=radio]:checked ~ span::after   {
+input[type=radio]:checked~span::after {
     content: "✓";
     right: 30px;
     position: absolute;
@@ -245,17 +245,17 @@ input[type=tel] {
     margin-right: 16px;
 }
 
-.contribution__first-card-col > div {
+.contribution__first-card-col>div {
     display: flex;
     justify-content: space-between;
 }
 
-.contribution__first-card-col > div label {
+.contribution__first-card-col>div label {
     display: inline-block;
     width: 118px;
 }
 
-.contribution__first-card-col > div label > input {
+.contribution__first-card-col>div label>input {
     margin-top: 6px;
 }
 
@@ -269,7 +269,7 @@ input[type=tel] {
     width: 530px;
 }
 
-.contribution__card > * {
+.contribution__card>* {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -280,7 +280,7 @@ input[type=tel] {
 }
 
 
-.contribution__card label > input {
+.contribution__card label>input {
     height: 60px;
     width: 100%;
     border-radius: 12px;
@@ -301,4 +301,118 @@ footer {
 footer *:first-child {
     letter-spacing: 3.1px;
     margin-bottom: 23px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* general */
+    .container {
+        width: 100%;
+    }
+
+    /* header */
+    .header {
+        flex-direction: column;
+        padding: 30px;
+        height: auto;
+    }
+
+    .header__container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header__content {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .header__content h1 {
+        font-size: 40px;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    .header__content .button--header {
+        width: 180px;
+    }
+
+    .header__dron {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* main */
+    .main {
+        padding: 30px;
+        height: auto;
+    }
+
+    .main h2 {
+        font-size: 24px;
+    }
+
+    .main p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .main__images {
+        flex-direction: column;
+    }
+
+    .main__images img {
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main__images img:not(:last-of-type) {
+        margin-right: 0;
+    }
+
+    /* contribution */
+    .contribution {
+        padding: 30px;
+        height: auto;
+    }
+
+    .contribution h2 {
+        font-size: 36px;
+    }
+
+    .contribution__form form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contribution__fonds {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contribution__card {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .contribution__first-card-col {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .button--bottom{
+        margin-top: 15px;
+    }
+
+    /* footer */
+    footer {
+        padding: 30px;
+        text-align: center;
+        height: auto;
+    }
 }
